@@ -2,7 +2,7 @@ name: Ansible folder
 on:
   push:
     paths:
-      - 'ansible/**'
+      - 'ansibles/**'
 
 jobs:
   handle-api:
