@@ -23,13 +23,13 @@ jobs:
     steps:
       # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
       - uses: actions/checkout@v4
-
+      - name: Run build
         run: |
           echo Add other actions to build
           echo test, and deploy your project.
-    deploy:
-      needs: build
-      runs-on: ubuntu-latest
-      steps:
-        - name: "My first deploy step"
-          run: echo "docker folder changed"
+  deploy:
+    needs: build
+    runs-on: ubuntu-latest
+    steps:
+      - name: "My first deploy step"
+        run: echo "docker folder changed"
